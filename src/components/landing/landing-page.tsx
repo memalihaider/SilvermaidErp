@@ -30,7 +30,7 @@ export function LandingPage() {
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Silver Maid</h1>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a href="#services" className="hover:text-blue-600 transition">Services</a>
+            <Link href="/services" className="hover:text-blue-600 transition">Services</Link>
             <a href="#why-us" className="hover:text-blue-600 transition">Why Us</a>
             <a href="#testimonials" className="hover:text-blue-600 transition">Testimonials</a>
             <a href="#faq" className="hover:text-blue-600 transition">FAQ</a>
@@ -39,9 +39,9 @@ export function LandingPage() {
             <Link href="/login">
               <Button variant="ghost" className="hidden sm:inline-flex">Sign In</Button>
             </Link>
-            <Link href="/login">
+            <Link href="/book">
               <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-600/20">
-                Get Started
+                Book Now
               </Button>
             </Link>
           </div>
@@ -69,15 +69,17 @@ export function LandingPage() {
               Experience the gold standard of cleaning. Silver Maid combines expert professionals with cutting-edge technology to deliver a spotless home or office, every time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/login" className="w-full sm:w-auto">
+              <Link href="/book" className="w-full sm:w-auto">
                 <Button size="xl" className="w-full bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/25 group">
                   Book Your Clean Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button size="xl" variant="outline" className="w-full sm:w-auto border-2">
-                View Pricing
-              </Button>
+              <Link href="/services" className="w-full sm:w-auto">
+                <Button size="xl" variant="outline" className="w-full border-2">
+                  View Services
+                </Button>
+              </Link>
             </div>
             
             {/* Trust Badges */}
@@ -286,14 +288,16 @@ export function LandingPage() {
                 Join 500+ happy customers in Dubai. Book your first cleaning in less than 60 seconds.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link href="/login">
+                <Link href="/book">
                   <Button size="xl" className="bg-white text-blue-600 hover:bg-gray-100 px-12 font-bold shadow-xl">
                     Book Now
                   </Button>
                 </Link>
-                <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10 px-12 font-bold">
-                  Contact Sales
-                </Button>
+                <Link href="/services">
+                  <Button size="xl" variant="outline" className="border-white text-white hover:bg-white/10 px-12 font-bold">
+                    View Services
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

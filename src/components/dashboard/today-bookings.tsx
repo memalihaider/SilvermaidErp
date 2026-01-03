@@ -12,7 +12,8 @@ export function TodayBookings() {
   const { showToast } = useToast();
 
   const handleNewBooking = () => {
-    showToast('Opening New Booking form...', 'info');
+    // Navigate to schedule page and trigger new booking
+    window.location.href = '/schedule?newBooking=true';
   };
 
   return (

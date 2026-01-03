@@ -13,6 +13,7 @@ interface ScheduleHeaderProps {
   onViewChange?: (view: ViewMode) => void;
   date?: Date;
   onDateChange?: (date: Date) => void;
+  onNewBooking?: () => void;
 }
 
 export function ScheduleHeader({
@@ -20,6 +21,7 @@ export function ScheduleHeader({
   onViewChange,
   date = new Date(),
   onDateChange,
+  onNewBooking,
 }: ScheduleHeaderProps) {
   const [currentView, setCurrentView] = React.useState<ViewMode>(view);
   const [currentDate, setCurrentDate] = React.useState<Date>(date);
@@ -55,7 +57,7 @@ export function ScheduleHeader({
   };
 
   const handleNewBooking = () => {
-    showToast('Opening New Booking form...', 'info');
+    onNewBooking?.();
   };
 
   const handleFilter = () => {
