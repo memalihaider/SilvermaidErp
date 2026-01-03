@@ -10,3 +10,4 @@ export { Label } from './label';
 export { Avatar } from './avatar';
 export { Spinner, LoadingState } from './spinner';
 export { Alert } from './alert';
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';
