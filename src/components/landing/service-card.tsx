@@ -15,7 +15,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const totalPrice = service.basePrice * (1 + service.vatRate / 100);
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col will-change-auto">
       <div className="bg-gradient-to-r from-blue-50 to-slate-50 p-6 flex-grow">
         <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.name}</h3>
         <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.description}</p>
@@ -41,7 +41,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
           <Link
             href={`/book?service=${service.id}`}
-            className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors gap-2"
+            className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 gap-2"
           >
             Book Now
             <ArrowRight className="h-4 w-4" />

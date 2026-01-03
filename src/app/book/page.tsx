@@ -191,7 +191,7 @@ export default function BookingPage() {
                     <button
                       key={service.id}
                       onClick={() => handleInputChange('serviceId', service.id)}
-                      className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
+                      className={`w-full p-4 rounded-lg border-2 transition-[border-color,background-color] text-left ${
                         bookingData.serviceId === service.id
                           ? 'border-blue-600 bg-blue-50'
                           : 'border-gray-200 hover:border-gray-300'

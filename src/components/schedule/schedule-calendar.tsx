@@ -130,7 +130,7 @@ export function ScheduleCalendar({ view = 'week' }: ScheduleCalendarProps) {
                           <div
                             key={booking.id}
                             className={cn(
-                              'absolute left-0.5 right-0.5 rounded-md p-1.5 cursor-pointer overflow-hidden border-l-4 transition-transform hover:scale-[1.02] hover:shadow-md',
+                              'absolute left-0.5 right-0.5 rounded-md p-1.5 cursor-pointer overflow-hidden border-l-4 transition-shadow hover:shadow-md',
                               booking.status === 'COMPLETED'
                                 ? 'bg-green-50 border-green-500'
                                 : booking.status === 'IN_PROGRESS'

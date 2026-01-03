@@ -24,7 +24,7 @@ export function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 group cursor-pointer">
-            <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+            <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 will-change-transform">
               <Sparkles className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight">Silver Maid</h1>
@@ -51,14 +51,14 @@ export function LandingPage() {
       {/* Hero */}
       <section className="relative overflow-hidden px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-100/50 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-3xl animate-pulse delay-700" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-100/50 rounded-full blur-3xl opacity-50" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-3xl opacity-40" />
         </div>
 
         <div className="max-w-7xl mx-auto">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-8 animate-bounce">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-8">
               <Zap className="h-3 w-3" />
               #1 Cleaning Service in Dubai
             </div>
@@ -72,7 +72,7 @@ export function LandingPage() {
               <Link href="/book" className="w-full sm:w-auto">
                 <Button size="xl" className="w-full bg-blue-600 hover:bg-blue-700 shadow-xl shadow-blue-600/25 group">
                   Book Your Clean Now
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform will-change-transform" />
                 </Button>
               </Link>
               <Link href="/services" className="w-full sm:w-auto">
@@ -83,11 +83,11 @@ export function LandingPage() {
             </div>
             
             {/* Trust Badges */}
-            <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-[filter] duration-500">
               <div className="flex items-center gap-2 font-bold text-xl">TRUSTED BY</div>
-              <div className="h-8 w-24 bg-gray-200 rounded animate-pulse" />
-              <div className="h-8 w-32 bg-gray-200 rounded animate-pulse" />
-              <div className="h-8 w-28 bg-gray-200 rounded animate-pulse" />
+              <div className="h-8 w-24 bg-gray-200 rounded" />
+              <div className="h-8 w-32 bg-gray-200 rounded" />
+              <div className="h-8 w-28 bg-gray-200 rounded" />
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export function LandingPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.id} className="group relative rounded-3xl border border-gray-200 p-8 hover:border-blue-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-600/10 bg-white overflow-hidden">
+              <div key={service.id} className="group relative rounded-3xl border border-gray-200 p-8 hover:border-blue-600 transition-[border-color,box-shadow] duration-300 hover:shadow-2xl hover:shadow-blue-600/10 bg-white overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-16 -mt-16 group-hover:bg-blue-100 transition-colors" />
                 <service.icon className="h-14 w-14 text-blue-600 mb-6 relative z-10" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 relative z-10">{service.name}</h3>

@@ -47,7 +47,7 @@ export function TodayBookings() {
             {bookings.map((booking) => (
               <div
                 key={booking.id}
-                className="flex items-start gap-4 p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                className="flex items-start gap-4 p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-[border-color,background-color] duration-150"
               >
                 {/* Time Column */}
                 <div className="flex flex-col items-center min-w-[80px]">
